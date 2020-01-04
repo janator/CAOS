@@ -23,6 +23,47 @@ which performs saturation addition, that is, in the case of integer overflow, re
 It is forbidden to use constants other than 0 and 1 in the program code. <br>
 It is forbidden to use platform-specific or compiler-dependent functions, data types with increased bit depth or real data types.
 
-[Solution phy01-1](https://github.com/rudykh/CAOS/blob/master/phy01/phy01-1.c)
+[Solution phy01-1](https://github.com/rudykh/CAOS/blob/master/phy01/phy01-1.c).
 
 ## Phy01-2
+Реализуйте функцию с прототипом: <br>
+`typedef enum {
+    PlusZero      = 0x00,
+    MinusZero     = 0x01,
+    PlusInf       = 0xF0,
+    MinusInf      = 0xF1,
+    PlusRegular   = 0x10,
+    MinusRegular  = 0x11,
+    PlusDenormal  = 0x20,
+    MinusDenormal = 0x21,
+    SignalingNaN  = 0x30,
+    QuietNaN      = 0x31
+} float_class_t;
+
+extern float_class_t
+classify(double *value_ptr);` <br>
+которая классифицирует специальные значения вещественного числа, на которое указывает value_ptr, в соответствии со стандартом IEEE 754.
+
+При решении допускается использовать только побитовые операции, включая сдвиги.
+
+Implement the function with the prototype: <br>
+`typedef enum {
+    PlusZero      = 0x00,
+    MinusZero     = 0x01,
+    PlusInf       = 0xF0,
+    MinusInf      = 0xF1,
+    PlusRegular   = 0x10,
+    MinusRegular  = 0x11,
+    PlusDenormal  = 0x20,
+    MinusDenormal = 0x21,
+    SignalingNaN  = 0x30,
+    QuietNaN      = 0x31
+} float_class_t;
+
+extern float_class_t
+classify(double *value_ptr);` <br>
+which classifies the special values of a real number pointed to by value_ptr, in accordance with the IEEE 754 standard.
+
+When solving, it is allowed to use only bitwise operations, including shifts.
+
+[Solution phy01-2](https://github.com/rudykh/CAOS/blob/master/phy01/phy01-2.c).
