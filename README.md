@@ -67,3 +67,32 @@ which classifies the special values of a real number pointed to by value_ptr, in
 When solving, it is allowed to use only bitwise operations, including shifts.
 
 [Solution phy01-2](https://github.com/rudykh/CAOS/blob/master/phy01/phy01-2.c).
+
+## Phy01-3
+Реализуйте калькулятор выражений над множествами в обратной польской записи.<br>
+На стандартном потоке ввода задается последовательность, состоящая из символов-значений, и символов-операций.<br>
+Значениями являются цифры от 0 до 9, и буквы английского алфавита (заглавные и строчные). Последовательности значений кодируют множества из 62 элементов.<br>
+Операциями являются:
+- & - пересечение множеств;
+- | - объединение множеств;
+- ^ - симметрическая разность;
+- ~ - дополнение текущего результата до полного множества.
+
+В начальный момент времени, множество-результат является пустым. При чтении символов со стандартного потока ввода, когда встречается символ операции, то эта операция применяется к множеству-результату и последнему прочитанному множеству (как в обратной польской записи).<br>
+Вывести на экран полученное итоговое значение множества в нормализованной форме: сначала цифры, затем заглавные буквы, потом - строчные (упорядоченные по алфавиту).<br>
+Для хранения множеств использовать, суммарно, не более 16 байт памяти.
+
+Implement an expression calculator over sets in the reverse Polish notation. <br>
+A sequence of characters and values is entered. <br>
+The values are numbers from 0 to 9, and the letters of the English alphabet (uppercase and lowercase). Value sequences encode a set of 62 elements. <br>
+The operations are:
+- & - intersection of many;
+- | - union of sets;
+- ^ is the symmetric difference;
+- ~ - addition of the current result to the full amount.
+
+At the initial time, the result set is empty. When reading characters from a standard input stream, when an operation character is encountered, this operation is applied to the result set and the last read set (as in the reverse Polish notation). <br>
+Display the resulting total value of the set in normalized form: first the numbers, then the capital letters, then the lowercase (sorted alphabetically). <br>
+To store sets, use, in total, no more than 16 bytes of memory.
+
+[Solution phy01-3](https://github.com/rudykh/CAOS/blob/master/phy01/phy01-3.c).
