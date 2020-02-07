@@ -1,0 +1,14 @@
+Implement function
+
+extern void normalize_path(char * path);
+
+which handles filepathes (ending with any symbol except /) and directory pathes (ending with /).
+
+Function must convert text to the canonic form:
+
+    remove duplication of consecutive /
+    handle fragments ./ and ../
+
+It's forbidden to use string library function.
+
+Use pointer arithmetic.
