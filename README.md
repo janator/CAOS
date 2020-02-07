@@ -27,26 +27,29 @@ It is forbidden to use platform-specific or compiler-dependent functions, data t
 
 ## Phy01-2
 Реализуйте функцию с прототипом: <br>
-`typedef enum {
+```
+typedef enum {
     PlusZero      = 0x00,
-    MinusZero     = 0x01,`
-    `PlusInf       = 0xF0,
-    MinusInf      = 0xF1,`
-   ` PlusRegular   = 0x10,
-    MinusRegular  = 0x11,`
-    `PlusDenormal  = 0x20,
-    MinusDenormal = 0x21,`
-   ` SignalingNaN  = 0x30,
+    MinusZero     = 0x01,
+    PlusInf       = 0xF0,
+    MinusInf      = 0xF1,
+    PlusRegular   = 0x10,
+    MinusRegular  = 0x11,
+    PlusDenormal  = 0x20,
+    MinusDenormal = 0x21,
+    SignalingNaN  = 0x30,
     QuietNaN      = 0x31`
 } float_class_t;
 
-`extern float_class_t
-classify(double *value_ptr);` <br>
+extern float_class_t
+classify(double *value_ptr);
+``` 
 которая классифицирует специальные значения вещественного числа, на которое указывает value_ptr, в соответствии со стандартом IEEE 754.
 
 При решении допускается использовать только побитовые операции, включая сдвиги.
 
-Implement the function with the prototype: <br>
+Implement the function with the prototype: 
+```
 typedef enum {
     PlusZero      = 0x00, 
     MinusZero     = 0x01,
@@ -61,7 +64,8 @@ typedef enum {
 } float_class_t;
 
 extern float_class_t
-classify(double *value_ptr); <br>
+classify(double *value_ptr); 
+```
 which classifies the special values of a real number pointed to by value_ptr, in accordance with the IEEE 754 standard.
 
 When solving, it is allowed to use only bitwise operations, including shifts.
@@ -98,26 +102,55 @@ To store sets, use, in total, no more than 16 bytes of memory.
 [Solution phy01-3](https://github.com/rudykh/CAOS/blob/master/phy01/phy01-3.c).
 
 ## Phy01-4
-Реализуйте функцию с прототипом:<br>
-`extern int<br>
-check_int(uint32_t u32); /* retval: 0 - false, 1 - true */`<br>
+Реализуйте функцию с прототипом:
+```
+extern int<br>
+check_int(uint32_t u32); /* retval: 0 - false, 1 - true */
+```
 которая проверяет, может ли число u32 быть представлено типом float:<br>
-`float f = u32;
+```
+float f = u32;
 uint64_t y = f;
-assert(u32==y);`<br>
+assert(u32==y);
+```
 Функция должна вернуть 1, если число может быть представлено типом float, или 0, - если не может.
 
 Допускается исользовать только побитовые операции.
 
 Implement the function with the prototype:<br>
-`extern int<br>
-check_int (uint32_t u32); / * retval: 0 - false, 1 - true * / `<br>
-which checks if a u32 number can be represented by a float type:<br>
-`float f = u32;
+```
+extern int
+check_int (uint32_t u32); / * retval: 0 - false, 1 - true * / 
+```
+which checks if a u32 number can be represented by a float type:
+```
+float f = u32;
 uint64_t y = f;
-assert (u32 == y); `<br>
+assert (u32 == y); 
+```
 The function should return 1 if the number can be represented by the float type, or 0 if it cannot.
 
 Only bitwise operations are allowed.
 
 [Solution phy01-4](https://github.com/rudykh/CAOS/blob/master/phy01/phy01-4.c).
+
+## Phy02-0
+Реализуйте функцию с меткой f, которая вычисляет значение выражения y=Ax<sup>2</sup>+Bx+C
+Значения A, B, C и x хранятся, соответсвенно, в регистрах r0, r1, r2 и r3.
+
+Результат вычисления выражения сохраните в регистре r0.
+
+Все аргументы и значение выражения представимы 32-разрядными знаковыми целыми числами.
+
+Использовать оперативную память запрещено, - можно использовать только регистры.
+
+Implement a function labeled f that evaluates the value of the expression y=Ax<sup>2</sup>+Bx+C
+The values of A, B, C and x are stored, respectively, in the registers r0, r1, r2 and r3.
+
+The result of evaluating the expression is stored in register r0.
+
+All arguments and the meaning of an expression are representable by 32-bit signed integers.
+
+Using RAM is prohibited - only registers can be used.
+
+[Solution phy02-0](https://github.com/rudykh/CAOS/blob/master/phy02/phy02-0.c).
