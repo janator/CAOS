@@ -28,7 +28,7 @@ It is forbidden to use platform-specific or compiler-dependent functions, data t
 ## Phy01-2
 Реализуйте функцию с прототипом: <br>
 `typedef enum {
-    PlusZero      = 0x00,
+    PlusZero      = 0x00,\\
     MinusZero     = 0x01,
     PlusInf       = 0xF0,
     MinusInf      = 0xF1,
@@ -48,7 +48,7 @@ classify(double *value_ptr);` <br>
 
 Implement the function with the prototype: <br>
 `typedef enum {
-    PlusZero      = 0x00,
+    PlusZero      = 0x00, \\
     MinusZero     = 0x01,
     PlusInf       = 0xF0,
     MinusInf      = 0xF1,
@@ -96,3 +96,28 @@ Display the resulting total value of the set in normalized form: first the numbe
 To store sets, use, in total, no more than 16 bytes of memory.
 
 [Solution phy01-3](https://github.com/rudykh/CAOS/blob/master/phy01/phy01-3.c).
+
+## Phy01-4
+Реализуйте функцию с прототипом:<br>
+`extern int<br>
+check_int(uint32_t u32); /* retval: 0 - false, 1 - true */`<br>
+которая проверяет, может ли число u32 быть представлено типом float:<br>
+`float f = u32;<br>
+uint64_t y = f;<br>
+assert(u32==y);`<br>
+Функция должна вернуть 1, если число может быть представлено типом float, или 0, - если не может.
+
+Допускается исользовать только побитовые операции.
+
+Implement the function with the prototype:<br>
+`extern int<br>
+check_int (uint32_t u32); / * retval: 0 - false, 1 - true * / `<br>
+which checks if a u32 number can be represented by a float type:<br>
+`float f = u32;<br>
+uint64_t y = f;<br>
+assert (u32 == y); `<br>
+The function should return 1 if the number can be represented by the float type, or 0 if it cannot.
+
+Only bitwise operations are allowed.
+
+[Solution phy01-4](https://github.com/rudykh/CAOS/blob/master/phy01/phy01-4.c).
