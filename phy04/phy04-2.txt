@@ -1,0 +1,10 @@
+Implement a function on asm-x86 (IA-32) or x86-64 with this signature:
+
+extern void mergesort(int from, int to, const int *in, int *out);
+      
+
+This function should do merge sort of integers.
+
+Parameters from and to are indices of left and right boundaries of sorting areas; in is a source array, out - a pointer to the allocated memory for the result.
+
+Use only stack memory, usage of the heap is forbidden.
