@@ -28,27 +28,27 @@ It is forbidden to use platform-specific or compiler-dependent functions, data t
 ## Phy01-2
 Реализуйте функцию с прототипом: <br>
 `typedef enum {
-    PlusZero      = 0x00,\\
-    MinusZero     = 0x01,
-    PlusInf       = 0xF0,
-    MinusInf      = 0xF1,
-    PlusRegular   = 0x10,
-    MinusRegular  = 0x11,
-    PlusDenormal  = 0x20,
-    MinusDenormal = 0x21,
-    SignalingNaN  = 0x30,
-    QuietNaN      = 0x31
+    PlusZero      = 0x00,
+    MinusZero     = 0x01,`
+    `PlusInf       = 0xF0,
+    MinusInf      = 0xF1,`
+   ` PlusRegular   = 0x10,
+    MinusRegular  = 0x11,`
+    `PlusDenormal  = 0x20,
+    MinusDenormal = 0x21,`
+   ` SignalingNaN  = 0x30,
+    QuietNaN      = 0x31`
 } float_class_t;
 
-extern float_class_t
+`extern float_class_t
 classify(double *value_ptr);` <br>
 которая классифицирует специальные значения вещественного числа, на которое указывает value_ptr, в соответствии со стандартом IEEE 754.
 
 При решении допускается использовать только побитовые операции, включая сдвиги.
 
 Implement the function with the prototype: <br>
-`typedef enum {
-    PlusZero      = 0x00, \\
+typedef enum {
+    PlusZero      = 0x00, 
     MinusZero     = 0x01,
     PlusInf       = 0xF0,
     MinusInf      = 0xF1,
@@ -61,7 +61,7 @@ Implement the function with the prototype: <br>
 } float_class_t;
 
 extern float_class_t
-classify(double *value_ptr);` <br>
+classify(double *value_ptr); <br>
 which classifies the special values of a real number pointed to by value_ptr, in accordance with the IEEE 754 standard.
 
 When solving, it is allowed to use only bitwise operations, including shifts.
@@ -102,8 +102,8 @@ To store sets, use, in total, no more than 16 bytes of memory.
 `extern int<br>
 check_int(uint32_t u32); /* retval: 0 - false, 1 - true */`<br>
 которая проверяет, может ли число u32 быть представлено типом float:<br>
-`float f = u32;<br>
-uint64_t y = f;<br>
+`float f = u32;
+uint64_t y = f;
 assert(u32==y);`<br>
 Функция должна вернуть 1, если число может быть представлено типом float, или 0, - если не может.
 
@@ -113,8 +113,8 @@ Implement the function with the prototype:<br>
 `extern int<br>
 check_int (uint32_t u32); / * retval: 0 - false, 1 - true * / `<br>
 which checks if a u32 number can be represented by a float type:<br>
-`float f = u32;<br>
-uint64_t y = f;<br>
+`float f = u32;
+uint64_t y = f;
 assert (u32 == y); `<br>
 The function should return 1 if the number can be represented by the float type, or 0 if it cannot.
 
